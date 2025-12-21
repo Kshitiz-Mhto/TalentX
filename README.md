@@ -11,7 +11,7 @@ TalentX is an AI-first talent network platform designed to connect businesses wi
 
 -   **Frontend**: Next.js, React, Tailwind CSS, Framer Motion, Lucide React.
 -   **Backend**: Node.js, Express, TypeScript, Prisma.
--   **Database**: PostgreSQL (Production), SQLite (Local Development).
+-   **Database**: PostgreSQL (Production).
 -   **Orchestration**: Docker Compose.
 
 ## Getting Started

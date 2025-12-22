@@ -11,14 +11,14 @@ export default function EnhancedHero() {
     const [activeTab, setActiveTab] = useState('talent');
 
     return (
-        <section className="relative pt-20 pb-32 overflow-hidden">
+        <section className="relative pt-8 pb-16 overflow-hidden">
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-white via-[#f5f7fa] to-[#eef2f7] -z-10" />
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#204ecf]/5 to-transparent -z-10" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Tab Switcher - Toptal Style */}
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-8">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -49,14 +49,14 @@ export default function EnhancedHero() {
                 </div>
 
                 {/* Hero Content */}
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
                     {/* Left Content */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#1a1a2e] leading-[1.1] tracking-tight">
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a2e] leading-[1.1] tracking-tight">
                             Hire the{' '}
                             <span className="relative inline-block">
                                 <span className="relative z-10 text-primary">Top 10%</span>
@@ -64,10 +64,10 @@ export default function EnhancedHero() {
                             </span>{' '}
                             of Global Talent
                         </h1>
-                        <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-lg">
+                        <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-lg">
                             TalentX is an exclusive network of the top software developers, designers, finance experts, product managers, and project managers in the world.
                         </p>
-                        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                             <Link href={createPageUrl('BrowseTalent')}>
                                 <Button className="h-14 px-8 text-lg bg-primary hover:bg-primary-hover text-white shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-1">
                                     Hire Top Talent

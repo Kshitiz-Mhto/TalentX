@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useWebSocket } from '@/shared/lib/hooks/useWebSocket';
-import { talentXApi, API_URL } from '@/shared/api/talentXApi';
+import { talentXApi, API_URL, WS_URL } from '@/shared/api/talentXApi';
 import { Button } from "@/shared/components/ui/button";
 import { MessageSquare, Users, Clock } from 'lucide-react';
 import { User } from '@/shared/types';
@@ -20,11 +20,7 @@ export const MessagesView = ({ user, initialShowSupport = false }: MessagesViewP
     const [selectedThreadUser, setSelectedThreadUser] = useState<string | null>(null);
 
     // WebSocket Integration
-    const wsUrl = talentXApi.entities.Message ?
-        API_URL.replace('http', 'ws').replace('/api', '') :
-        'ws://localhost:8000';
-
-    const { isConnected, lastMessage, sendMessage: sendWSMessage } = useWebSocket(wsUrl);
+    const { isConnected, lastMessage, sendMessage: sendWSMessage } = useWebSocket(WS_URL);
 
     const { data: currentMessages, isLoading: messagesLoading } = useQuery({
         queryKey: ['messages', showSupport, selectedThreadUser],

@@ -1,7 +1,7 @@
-import { apiClient, API_URL } from './client';
+import { apiClient, API_URL, WS_URL } from './client';
 import { Talent, Agency, Team, Subscription, HireRequest, Project, Task, User, Message, FAQ, Testimonial, CaseStudy, BlogPost, AuditLog } from '@/shared/types';
 
-export { API_URL };
+export { API_URL, WS_URL };
 
 export const talentXApi = {
     auth: {

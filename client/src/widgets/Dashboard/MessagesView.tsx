@@ -257,11 +257,7 @@ export const MessagesView = ({ user, initialShowSupport = false }: MessagesViewP
                                     name="message"
                                     rows={1}
                                     placeholder={showSupport ? "Type support response..." : "Write your message..."}
-<<<<<<< Updated upstream
-                                    className="flex-1 bg-transparent px-4 py-2 outline-none text-sm text-gray-800"
-=======
                                     className="flex-1 bg-transparent px-4 py-2 outline-none text-sm resize-none overflow-y-auto"
->>>>>>> Stashed changes
                                 />
                                 <Button type="submit" className="bg-[#204ecf] hover:bg-[#1a3da8] text-white px-6 rounded-xl font-bold text-xs uppercase tracking-widest cursor-pointer">
                                     Send

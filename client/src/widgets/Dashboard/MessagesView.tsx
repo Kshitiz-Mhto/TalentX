@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useWebSocket } from '@/shared/lib/hooks/useWebSocket';
-import { talentXApi, API_URL, WS_URL } from '@/shared/api/talentXApi';
+import { talentXApi, WS_URL } from '@/shared/api/talentXApi';
 import { Button } from "@/shared/components/ui/button";
 import { MessageSquare, Users, Clock } from 'lucide-react';
 import { User } from '@/shared/types';
@@ -109,8 +109,10 @@ export const MessagesView = ({ user, initialShowSupport = false }: MessagesViewP
     });
 
     return (
+      
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 h-[600px] flex flex-col overflow-hidden">
             <div className="p-4 border-b border-gray-200 flex items-center justify-between bg-gray-50/50">
+            
                 <div className="flex items-center gap-3">
                     <div className="relative">
                         <MessageSquare className="w-5 h-5 text-[#204ecf]" />
@@ -251,15 +253,15 @@ export const MessagesView = ({ user, initialShowSupport = false }: MessagesViewP
                                         input.value = '';
                                     }
                                 }}
-                                className="flex gap-3 bg-white p-2 rounded-2xl border border-gray-200 shadow-sm focus-within:ring-2 focus-within:ring-[#204ecf]/20 transition-all"
+                                className="flex items-center gap-3 bg-white text-black p-2 rounded-2xl border border-gray-200 shadow-sm focus-within:ring-2 focus-within:ring-[#204ecf]/20 transition-all"
                             >
-                                <input
+                                <textarea
                                     name="message"
-                                    type="text"
+                                    rows={1}
                                     placeholder={showSupport ? "Type support response..." : "Write your message..."}
-                                    className="flex-1 bg-transparent px-4 py-2 outline-none text-sm"
+                                    className="flex-1 bg-transparent px-4 py-2 outline-none text-sm resize-none overflow-y-auto"
                                 />
-                                <Button type="submit" className="bg-[#204ecf] hover:bg-[#1a3da8] text-white px-6 rounded-xl font-bold text-xs uppercase tracking-widest">
+                                <Button type="submit" className="bg-[#204ecf] hover:bg-[#1a3da8] text-white px-6 rounded-xl font-bold text-xs uppercase tracking-widest cursor-pointer">
                                     Send
                                 </Button>
                             </form>
